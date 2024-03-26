@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* estilo del body */
+body {
+
+    font-family: "Honk", system-ui;
+    background:#5e5ee9;
+    display: flex;
+    height: 100vh;
+
+}
+
+/* estilo de la caja del grid */
+.grid {
+    background: white;
+    height: 90vh;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    display: grid;
+    /*creo columnas con grid*/
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    overflow: hidden;
+    /*todo lo que salga del elemento grid desaparesca*/
+
+}
+
+/* creo un pseudoelemento de grid para poner la imagen */
+.grid::before {
+    content: "";
+    grid-column: 4/-1;
+    grid-row: 1/-1;
+    background-image: url(medusanew.png);
+    size: 50px;
+    background-size: cover;
+    background-position: right top;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    /*escondo la img con clipath*/
+    animation: showImagen 2s 3.5s ease forwards;
+    /*llamo ala animacion,forwards para que termine la animacion con la img completa*/
+
+}
+
+/* creo la primera animacion para enseñar la imgen */
+@keyframes showImagen {
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+
+}
+
+/* estilo del contenedor de los titulos */
+.grid__texts {
+    grid-row: 2/-2;
+    grid-column: 2/8;
+    z-index: 1;
+    display: flex;
+    /*pone el texto alado del otro*/
+    flex-direction: column;
+    justify-content: center;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translate(50%);
+    animation: showText 2s 2s forwards, moveText 1s 2s forwards;
+
+}
+
+/* estilo del titulo */
+.grid__title {
+    font-size: 6rem;
+}
+
+.grid__title--transform {
+    font-size: 4.5rem;
+    transform: translate(44%);
+    animation: moveText 1s 2s forwards;
+
+}
+
+/* creo la animacion para enseñar el texto y moverlo */
+@keyframes showText {
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+
+    }
+}
+
+@keyframes moveText {
+    to {
+        transform: translate(0);
+
+    }
+}

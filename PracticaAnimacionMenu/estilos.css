@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    background: rgb(142, 142, 255);
+    height: 80px;
+}
+/* estilo de la caja donde estan los itme y el checkbox */
+.nav__container{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+/* hacemos desaparece el checkboc con display none */
+.nav__checkbox{
+    display: none;
+}
+
+/* estilo del contenedor del icono */
+.nav__icon{
+    cursor: pointer;
+}
+
+/* estilo del icono */
+.nav__img{
+    display: block;
+    width: 35px;
+}
+
+/* estilo del contenedor de los itemns de nav__link */
+.nav__items{
+    position: fixed;
+    top: 80px;
+    right: 0;
+    background: rgb(142, 142, 255);
+    height: 100%;
+    width: 60%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translate(100%);
+    transition: .4s transform;
+    
+
+}
+/* activamos el chekbox */
+.nav__checkbox:checked + .nav__items{
+    transform: unset;
+}
+
+/* estilo de los elementos nav__link */
+.nav__link{
+    color: white;
+    text-decoration: none;
+}

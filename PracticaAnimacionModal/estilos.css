@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clip: circle(0 at top right);
+    --transitionModal: .5s transform;
+    --show: scale(0);
+    --transitionBackground: 1s .5s clip-path;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+}
+
+.cta {
+    display: inline-block;
+    margin: auto;
+    background: blue;
+    padding: 15px 50px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+
+/* estilo del la caja del modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.79);
+    display: flex;
+    clip-path: var(--clip);
+    transition: var(--transitionBackground);
+}
+
+/* activar la animacion */
+.modal:target {
+    --clip: circle(150% at top right);
+    --transitionModal: .5s 1s transform;
+    --show: scale(1);
+    --transitionBackground: 1s clip-path;
+}
+
+/* estilo de modal container */
+.modal__container {
+    margin: auto;
+    background: white;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 70%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    position: relative;
+
+    transform: var(--show);
+    transition: var(--transitionModal);
+}
+
+/* estilo del modal close */
+.modal__close {
+    position: absolute;
+    background: red;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+
+}
+
+/* estilo de la imagen */
+.modal__img {
+    grid-row: 1/-1;
+    grid-column: 1/4;
+    width: 90%;
+    place-self: center;
+
+}
+
+/* estilo del texto */
+.modal__text {
+    grid-row: 2/-2;
+    grid-column: 4/-2;
+    place-self: center;
+    display: grid;
+    gap: 20px;
+    justify-items: start;
+
+}
+
+/* estilo del titulo */
+.modal__title {
+    font-size: 3rem;
+}
+
+/* estilo del paragraph */
+.modal__paragraph {
+    font-size: 1.2rem;
+}
+
+/* estilo del boto */
+.modal__cta {
+    display: inline-block;
+    margin: auto;
+    background: blue;
+    padding: 15px 50px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+
+}

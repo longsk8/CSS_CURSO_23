@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+/*  variables  */
+:root {
+    --padding-container: 4rem 0;
+    --font-body: "Open Sans", sans-serif;
+    --font-heading: "Poppins", sans-serif;
+    --padding-container: 4rem 0;
+    --pink: hsl(322, 100%, 66%);
+    --light-pink: hsl(321, 100%, 78%);
+    --light-red: hsl(0, 100%, 63%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --very-pale-blue: hsl(207, 100%, 98%);
+}
+
+body {
+    /*fuente al body de la pagina */
+    font-family: var(--font-body);
+}
+
+/* estilo de la pagina */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+/* estilo del hero */
+.hero {
+    min-height: 100vh;
+    /*alto minimo*/
+    position: relative;
+    /*para posicionar las wave*/
+    --wave-bottom: url('../practicaPagina/Primer\ Reto\ -\ Start/images/bg-section-top-mobile-1.svg');
+}
+
+/* estilo del navegador */
+.hero__nav {
+    display: flex;
+    /*juntar los elementos*/
+    justify-content: space-between;
+    /*se pegen alas esquina*/
+    align-items: center;
+    --padding-container: 4rem 0 3rem;
+}
+
+/* estilo de la caja logo  */
+.hero__logo {
+    width: 45%;
+    max-width: 160px;
+
+}
+
+/* estilo del logo */
+.logo__huddle {
+    width: 100%;
+    /*ocupe 100% de su contendor*/
+    display: block;
+    /*quita el margen de la img que vine por defecto*/
+}
+
+/* estilo del boton */
+.hero__cta {
+    color: var(--light-pink);
+    border: 2px solid;
+    padding: .3em 1em;
+    text-decoration: none;
+    border-radius: 2em;
+    font-weight: 600;
+    box-shadow: 0 0 1px hsla(192, 100%, 9%, .5);
+}
+
+
+/* estilo del hero main donde esta el contenido principal */
+.hero__main {
+    text-align: center;
+    color: var(--very-dark-cyan);
+}
+
+.hero__texts {
+    display: grid;
+    gap: 1em;
+    margin: 0;
+}
+
+.hero__title {
+    font-family: var(--font-heading);
+}
+
+.hero__paragraph {
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* estilo del boton */
+.cta {
+    display: inline-block;
+    background-color: var(--pink);
+    color: white;
+    text-decoration: none;
+    justify-self: center;
+    padding: 1em 1.8em;
+    border-radius: 2em;
+    margin-top: 1em;
+    font-weight: 600;
+    box-shadow: -5px 8px 16px -10px hsla(192, 100%, 9%, .5);
+}
+
+/* estilo del contenedor la imagen */
+.hero__picture {
+    margin-top: 5em;
+}
+
+/* estilo de la img */
+.hero__img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+
+}
+
+/* estilo del hero__number  */
+.hero__numbers {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+/* hero__items */
+.hero__items {
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+.hero__number {
+    font-size: 3.5rem;
+}
+
+.hero__community {
+    text-align: center;
+}
+
+.hero__icon {
+    display: block;
+}
+
+/* estilo de la ola fondo */
+.wave {
+    position: absolute;
+    /**/
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: 100% 100px;
+}
+
+.wave--bottom {
+    left: 0;
+    bottom: 0;
+    background-image: var(--wave-bottom);
+}
+
+.wave--top {
+    left: 0;
+    top: 0;
+    background-image: var(--wave-top);
+}
+
+
+/* estilo de las secciones */
+.section {
+    background-color: var(--very-pale-blue);
+    --padding-container: 7rem 0;
+}
+
+/* seccion que lleva el color blanco */
+.section--white {
+    --padding-container: 13rem 0;
+    position: relative;
+    background-color: white;
+    --wave-top: url('../practicaPagina/Primer\ Reto\ -\ Start/images/bg-section-bottom-mobile-1.svg');
+    --wave-bottom: url('../practicaPagina/Primer\ Reto\ -\ Start/images/bg-section-top-mobile-2.svg');
+}
+
+.section__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.section__img {
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: 0 auto;
+}
+
+.section__texts {
+    margin-top: 3rem;
+    text-align: center;
+
+}
+
+.subtitle {
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+/* seccion de question */
+.question {
+    position: relative;
+    text-align: center;
+    --wave-top: url('../practicaPagina/Primer\ Reto\ -\ Start/images/bg-section-bottom-mobile-2.svg');
+    --wave-bottom: url('../practicaPagina/Primer\ Reto\ -\ Start/images/bg-footer-top-mobile.svg');
+    --padding-container: 12rem 0 13rem;
+
+}
+
+/* estilo del footer */
+.footer {
+    color: white;
+    background-color: var(--very-dark-cyan);
+}
+
+.footer__title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.footer__paragraph--newsletter {
+    margin: 1rem 0 0;
+}
+
+
+.footer__paragraph {
+    margin: 1rem 0 3rem;
+}
+
+
+/* contenedor del imput */
+.footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    /*si pasa del container pasa a bajo el contenido*/
+    margin-bottom: 5em;
+}
+
+.footer__input {
+    flex: 100%;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 1em .3em;
+    margin-bottom: 1em;
+
+}
+
+.footer__cta {
+    background-color: var(--pink);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    color: white;
+    padding: .6em 2.5em;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: auto;
+    /*lo paso ala derecha*/
+}
+
+/* estiolo del contenedor del footer contact */
+.footer__contact {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 1em;
+    align-items: center;
+}
+
+
+.footer__contact--email {
+    margin: 1em 0 3em;
+}
+
+.footer__contact::after {
+    content: " phone: +1-543-123-4567 ";
+}
+
+.footer__contact--email::after {
+    content: "example@huddle.com";
+
+}
+
+/* estiloa de los iconos */
+.footer__social {
+    display: grid;
+    grid-auto-flow: column;
+    /*se pone uno alod del otro*/
+    grid-auto-columns: 40px;
+    gap: 1em;
+}
+
+.footer__link {
+    text-decoration: none;
+}
+
+.footer__icon {
+    display: block;
+    width: 100%;
+}
+
+/* adapto a escritorio */
+@media(min-width:768px) {
+    .hero {
+        /* cambio la ola a escritorio */
+        --wave-bottom: url('../practicaPagina/Primer\ Reto\ -\ Start/images/bg-section-top-desktop-1.svg');
+    }
+
+    .hero__main {
+        --padding-container: 8rem 0;
+    }
+
+    /* agrandamos el titulo */
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    /* achico el containe del parrafo */
+    .hero__paragraph {
+        width: 70%;
+    }
+
+    /* estilo del botn */
+    .cta {
+        padding: 1em 2.2em;
+    }
+
+    /* hero numbers */
+    .hero__numbers {
+        flex-direction: row;
+        /*direccion en fila*/
+        justify-content: space-around;
+
+    }
+
+    .hero__number {
+        font-size: 5rem;
+    }
+
+    /* seccion que lleva el color blanco */
+    .section--white {
+        --wave-top: url('../practicaPagina/Primer\ Reto\ -\ Start/images/bg-section-bottom-desktop-1.svg');
+        --wave-bottom: url('../practicaPagina/Primer\ Reto\ -\ Start/images/bg-section-top-desktop-2.svg');
+    }
+
+    /* cambiamos los elementos uno alado del otro */
+    .section__container{
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;/*contenido a las esquina*/
+    }
+    /* unas de la seccion es inversa */
+    .section__container--inverse{
+        flex-direction: row;
+    }
+
+    /* contenedor de la img */
+    .section__picture{
+        width: 50%;
+    }
+
+    .section__texts{
+        width: 45%;
+        margin: 0;
+        text-align: left;
+    }
+
+    .question{
+        --wave-top: url('../practicaPagina/Primer\ Reto\ -\ Start/images/bg-section-bottom-desktop-2.svg');
+        --wave-bottom: url('../practicaPagina/Primer\ Reto\ -\ Start/images/bg-footer-top-desktop.svg');
+        --padding-container: 12rem 0 13rem;
+    }
+
+    .footer{
+        --padding-container:7rem 0;
+    }
+    /* adpto el footer */
+    .footer__container{
+        display: flex;
+       
+     
+    }
+    .footer__newsletter{
+        order: 1;/*lo paso ala derecha*/
+        width: 50%;
+        max-width: 350px;
+        margin-left: auto;
+    }
+
+    .footer__content{
+        width: 50%;
+        max-width: 300px;
+    }
+}

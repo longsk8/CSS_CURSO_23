@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Inter+Tight:wght@300;400;700&family=Oswald:wght@300&family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter Tight', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    opacity: 0;
+    transition: opacity 1s;
+    pointer-events: none;
+
+}
+
+/* cuanndo modal esta en target */
+.modal:target{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+/* caja de container donde esta la img y el texto */
+.modal__container {
+    position: relative;
+    background: radial-gradient(19px at calc(100% + calc(19px*.866)) 50%, #ecf000 99%, #0000 101%) 0 calc(-5*19px/2),
+        radial-gradient(19px at calc(100% + calc(19px*.866)) 50%, #ecf000 99%, #0000 101%) calc(-2*calc(19px*.866)) calc(19px/2),
+        radial-gradient(19px at 100% 50%, #0841ff 99%, #0000 101%) 0 calc(-2*19px),
+        radial-gradient(19px, #ecf000 99%, #0000 101%) calc(19px*.866) calc(-5*19px/2),
+        radial-gradient(19px, #0841ff 99%, #0000 101%) calc(19px*.866) calc(5*19px/2),
+        radial-gradient(19px at 100% 100%, #ecf000 99%, #0000 101%) 0 calc(-1*19px),
+        radial-gradient(19px at 0% 50%, #ecf000 99%, #0000 101%) 0 calc(-4*19px),
+        radial-gradient(19px, #0841ff 99%, #0000 101%) calc(-1*calc(19px*.866)) calc(-7*19px/2),
+        radial-gradient(19px, #ecf000 99%, #0000 101%) calc(-1*calc(19px*.866)) calc(-5*19px/2),
+        radial-gradient(19px at 100% 50%, #0841ff 99%, #0000 101%) calc(-2*calc(19px*.866)) 19px,
+        radial-gradient(19px, #ecf000 99%, #0000 101%) calc(-1*calc(19px*.866)) calc(19px/ 2),
+        radial-gradient(19px, #0841ff 99%, #0000 101%) calc(-1*calc(19px*.866)) calc(19px/-2),
+        radial-gradient(19px, #ecf000 99%, #0000 101%) 0 calc(-1*19px),
+        radial-gradient(19px, #0841ff 99%, #0000 101%) calc(19px*.866) calc(19px/-2),
+        radial-gradient(19px, #ecf000 99%, #0000 101%) calc(19px*.866) calc(19px/ 2) #0841ff;
+    background-size: calc(4*calc(19px*.866)) calc(6*19px);
+    width: 90%;
+    padding: 40px 10px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-radius: 16px;
+    max-width: 1200px;
+}
+
+/*estilo de la caja donde van los texto */
+.modal__texts {
+    width: 90%;
+}
+
+/* estilo del titulo */
+.modal__title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* estilo del paragraph */
+.modal__paragraph {
+    line-height: 1.7;
+}
+
+/* estilo de la imagen */
+.modal__img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* creamos la animacion */
+.modal:target .modal__container{
+    animation: showModal 2s forwards;
+    opacity: 0;
+}
+
+@keyframes showModal {
+    0%{
+        transform: translateY(-200%) rotate(10deg);
+    }
+    50%{
+        transform: translateY(0) rotate(-10deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+    
+}
+/* estilo del boton close */
+.modal__close {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: rgb(183, 26, 26);
+    line-height: 30px;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* estilo del boton */
+.cta {
+    background: blue;
+    border-radius: 6px;
+    padding: 15px 60px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}

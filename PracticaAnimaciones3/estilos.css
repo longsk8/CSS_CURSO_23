@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilo de la caja de la referencia */
+.picture{
+    width: 350px;
+    display: block;
+    margin: 30px auto;
+}
+
+/* estilo de la imagen */
+.picture__img{
+    width: 100%;
+    max-height: 600px;
+}
+
+/* estilo de la caja para enseñar la foto */
+.show{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* background: black; */
+    top: 0;
+    left: 0;
+    display: flex;
+    transform: scale(0);
+    transition: .4s transform;
+    
+}
+
+.show:target{
+    transform: scale(1);
+   
+}
+
+/* show__image */
+.show__image{
+    width: 80%;
+    height: 90%;
+    background-image: url(mujerrobot2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    position: relative;
+    object-fit: cover;
+}
+
+/* estilo del close */
+.show__close{
+    background-color:#133144;
+    color:white;
+    text-decoration: none;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

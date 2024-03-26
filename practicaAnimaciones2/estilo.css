@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilo de la caja donde esta la img y el text */
+.picture {
+    width: 350px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* estilo de la imgen */
+.picture__img {
+    width: 100%;
+    display: block;
+}
+
+/* estilo del caja del texto */
+.picture__container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(234, 255, 75, 0.212);
+    padding: 60px 20px;
+    color: white;
+    transform: translate(100% ,100%) rotate(0);/*traslada 100% ala derecha de su contenero y trastla 100% en Y*/
+    transition: .5s;
+
+}
+
+/* cuando pase el raton creo la animacion */
+.picture:hover .picture__container {
+    transform: translate(0)rotate(360deg);
+    
+    }
+
+/* estilo del titulo */
+.picture__title {
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 2px solid;
+    padding-bottom: 8px;
+    margin-bottom: 1em;
+}
+
+/*  estilo del paragrafo */
+.picture__paragraph {
+    line-height: 1.5;
+}

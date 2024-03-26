@@ -1,0 +1,41 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* estilo de la caja el corazon */
+.corazon__caja{
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    object-fit: cover;
+    overflow: hidden;
+}
+/* animacion a la imagen */
+.corazon{
+    filter: drop-shadow(0px 0 10px rgb(0, 0, 0));
+    /*variable animacion  */
+    animation-name: pulsaciones;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  
+   
+}
+/* cuado pase el raton inicia la animacion */
+.corazon:hover{
+
+ animation-play-state: paused;
+}
+/* indico desde cuando inicie la animacion */
+@keyframes pulsaciones{
+    to{
+        transform: scale(0.8);
+    }
+    from{
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,472 @@
+/* estilo de las letras de heading */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* estilo de las letras del navegador*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* reset de los estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* creo las variables */
+    --letra-navegador: "Open Sans", sans-serif;
+    --letra-heading: "Raleway", sans-serif;
+    --Dark-Blue-intro: hsl(217, 28%, 15%);
+    /*(intro and email sign up background)*/
+    --Dark-Blue-main: hsl(218, 28%, 13%);
+    /*(main background)*/
+    --Dark-Blue-footer: hsl(216, 53%, 9%);
+    /*(footer background)*/
+    --Dark-Blue-testimonial: hsl(219, 27%, 20%);
+    /*(testimonials background)*/
+    --cyan-gradient: hsl(176, 68%, 64%);
+    --blue-gradient: hsl(198, 60%, 50%);
+    --gradient: linear-gradient(to right, var(--cyan-gradient), var(--blue-gradient));
+    --body-font: 'Open Sans', sans-serif;
+    --heading-font: 'Raleway', sans-serif;
+
+    --padding-container: 30px 0;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--Dark-Blue-main);
+}
+
+/* editamo el container de la pagina */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+/* estilo del la caja del header nav */
+.hero {
+    background-color: var(--Dark-Blue-intro);
+    position: relative;
+    color: white;
+}
+
+/* estilo de la ola */
+.hero__wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background-color: var(--Dark-Blue-main);
+}
+
+.hero__wave::before {
+    content: "";
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: -100px;
+    background-image: url("../images/bg-curvy-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100px;
+}
+
+/* estilo de la caja del navegador */
+.nav {
+    display: flex;
+    align-items: center;
+    font-family: var(--heading-font);
+
+}
+
+/* estilo del logo */
+.nav__img {
+    width: 100px;
+    display: block;
+}
+
+/* estilo de la caja de los enlaces */
+.nav__links {
+    margin-left: auto;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+}
+
+/* estilo de los enlaces */
+.nav__link {
+    color: white;
+    text-decoration: none;
+}
+
+/* estilo de la caja principal donde esta la img y los texto */
+.hero__main {
+    text-align: center;
+    position: relative;
+}
+
+/* estilo de la imgen */
+.hero__img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* estilo del titulo */
+.hero__title {
+    font-family: var(--letra-heading);
+    margin: 2.5em 0 1em;
+}
+
+/* estilo del parafrago */
+.hero__paragraph {
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+/* estilo del boton */
+.hero__cta {
+    display: inline-block;
+    width: 250px;
+    padding: 15px 0;
+    background-image: var(--gradient);
+    color: white;
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-weight: bold;
+    border-radius: 30px;
+    margin-bottom: 3em;
+}
+
+/* estilo de las tarjetas */
+.cards {
+    text-align: center;
+    display: grid;
+    gap: 5em;
+    color: white;
+}
+
+/* estilo de las imagenes de las tarjetas */
+.card__img {
+    width: 110px;
+    height: 130px;
+    object-fit: contain;
+    /*no distorciona la img*/
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+}
+
+/* estilo del titulo de las tarjetas */
+.card__title {
+    font-family: var(--heading-font);
+    margin-bottom: 1em;
+}
+
+/* estilo del paragraph de las tarjetas */
+.card__paragraph {
+    line-height: 1.5;
+}
+
+/* about */
+.about__img {
+    width: 100%;
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+    object-fit: contain;
+    margin-bottom: 3em;
+}
+
+/* contenedero de los texto */
+.about__texts {
+    color: white;
+}
+
+.about__title {
+    font-family: var(--heading-font);
+}
+
+.about__paragraph {
+    margin-top: 2em;
+    line-height: 1.5;
+}
+
+.about__cta {
+    margin-top: 1em;
+    display: inline-block;
+    color: var(--cyan-gradient);
+    text-decoration: none;
+    line-height: 2.5;
+    border-bottom: 1px solid var(--cyan-gradient);
+}
+
+.about__icon {
+    width: 20px;
+    margin-left: .2em;
+    vertical-align: middle;
+}
+
+/* contenedor todo testimony cards */
+.testimony {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    color: white;
+}
+
+
+/* caja de los testimony */
+.testimony__item {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--Dark-Blue-testimonial);
+    padding: 2em 1.2em;
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px -5px rgba(255, 255, 255, 255 .28);
+}
+
+/* pongo un icono arriba de una tarjetra con el modificador de su clase*/
+.testimony__item--first::after {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+    /*pasa de tras de la caja de la tarjeta*/
+    background-image: url("../images/bg-quotes.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+.testimony__info {
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+/* contenedor de la imagen */
+.testimony__picture {
+    width: 40px;
+    height: 40px;
+}
+
+.testimony__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimony__name {
+    font-size: 1.1rem;
+    font-family: var(--body-font);
+    margin-bottom: .4em;
+}
+
+.testimony__job {
+    font-size: .8rem;
+    color: rgb(161, 159, 159);
+}
+
+/* toda la caja de la section join */
+.join {
+    background-image: linear-gradient(var(--Dark-Blue-main)50%, var(--Dark-Blue-footer)50%);
+    padding: 60px 0;
+}
+
+.join__container{
+    background-color: var(--Dark-Blue-testimonial);
+    padding: 3.5em 1.5em;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+
+.join__title{
+    font-family: var(--heading-font);
+    margin-bottom: 1em;
+}
+
+.join__paragraph{
+    line-height: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+/* contenedor de los input */
+.join__form{
+    display: grid;
+    gap: 1em;
+}
+
+.join__input{
+    font: inherit;
+    padding: 1em 1.4em;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.join__input--submit{
+    background-image: var(--gradient);
+    color: white;
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+
+/* footer */
+.footer{
+    color: white;
+    background-color: var(--Dark-Blue-footer);
+
+}
+/* contenedor del logo del footer */
+.footer__picture{
+    width: 200px;
+    margin-bottom: 2.5em; 
+}
+.footer__img{
+    width: 100%;
+    display: block;
+}
+
+/* contenedor de los enlaces numero de telfono y email */
+.footer__contact{
+    padding-bottom: 20px;
+}
+/* elemtos parrafo y enlaaces */
+.footer__direction{
+    color: white;
+    text-decoration: none;
+    display: flex;/*poner ls texto alados de las img*/
+    gap: 1em;
+    align-items: flex-start;/*para que las img no se estiren*/
+}
+.footer__direction--second{
+    margin: 1em 0;
+}
+
+/* etiquetas nav */
+.footer__nav{
+    display: grid;
+    gap: .7em;
+    margin-top: 2em;
+}
+.footer__link{
+    color: white;
+    text-decoration: none;
+    font-family: var(--heading-font);
+}
+
+.footer__link:hover{
+    text-decoration: underline;
+}
+
+/* estilo de los la caja de los icons */
+.footer__social{
+    margin: 0 auto;
+    width: max-content;
+    margin-top: 4em;
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-auto-flow: column;
+    gap: 1em;
+}
+
+.footer__smedia{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.footer__media{
+    display: block;
+}
+
+/* adaptar a desktop */
+@media (min-width:768px){
+  .hero__wave::before{
+    background-image: url("../images/bg-curvy-desktop.svg");
+  }
+  
+  .hero__title{
+    font-size: 3rem;
+  }
+/* cards */
+  .cards{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3em 4em;
+  }
+  /* about */
+  .about{
+
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    align-items: center;
+    margin-top: 3em;
+  }
+
+  .about__title{
+    font-size: 2rem;
+  }
+
+  /* testimony */
+  .testimony{
+
+    justify-content: space-between;
+  }
+
+  .testimony__item{
+    width: 30%;
+  }
+
+  /* join */
+  .join__container{
+    max-width: 800px;
+  }
+
+  .join__form{
+    padding-top: 1em;
+    grid-template-columns: 1fr max-content;
+
+  }
+  /* footer */
+  .footer__content{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2em;
+  }
+  .footer__nav{
+    margin-top: 0;
+  }
+
+  .footer__contact{
+    max-width: 200px;
+  }
+
+  .footer__social{
+    margin: 0;
+  }
+  .footer__direction--first{
+    max-width: 300px;
+  }
+
+  .footer__direction--second{
+    margin: 0 0 1em;
+  }
+}
